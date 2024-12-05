@@ -1,2 +1,0 @@
-This is the initial content of the file.
-This is the new data being appended to the file.
