@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functional Programming Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        .output {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Functional Programming Techniques</h1>
+    
+    <div class="output">
+        <p><strong>Original Array:</strong> [1, 2, 3, 4, 5, 6, 7, 8, 9]</p>
+        <p><strong>Squared Numbers (using map):</strong> <span id="mapResult"></span></p>
+        <p><strong>Even Numbers (using filter):</strong> <span id="filterResult"></span></p>
+        <p><strong>Sum of Numbers (using reduce):</strong> <span id="reduceResult"></span></p>
+    </div>
+
+    <script>
+        // The original array of numbers
+        const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+        // Using map to square each number
+        const squaredNumbers = numbers.map(num => num * num);
+
+        // Using filter to get even numbers
+        const evenNumbers = numbers.filter(num => num % 2 === 0);
+
+        // Using reduce to get the sum of all numbers
+        const sumOfNumbers = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+        // Display the results in the HTML
+        document.getElementById('mapResult').textContent = squaredNumbers.join(', ');
+        document.getElementById('filterResult').textContent = evenNumbers.join(', ');
+        document.getElementById('reduceResult').textContent = sumOfNumbers;
+    </script>
+</body>
+</html>

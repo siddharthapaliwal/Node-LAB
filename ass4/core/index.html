@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORS Test</title>
+</head>
+
+<body>
+    <h1>Testing CORS in Express</h1>
+    <button id="testBtn">Test API</button>
+    <script>
+        document.getElementById('testBtn').addEventListener('click', () => {
+            fetch('http://localhost:3000/api', {
+                method: 'GET',
+                credentials: 'include', // Include cookies if necessary
+            })
+                .then((response) => response.json())
+                .then((data) => alert('Response: ' + JSON.stringify(data)))
+                .catch((error) => console.error('Error:', error));
+        });
+    </script>
+</body>
+
+</html>

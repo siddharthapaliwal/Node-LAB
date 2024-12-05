@@ -1,0 +1,70 @@
+Test Your Application
+Run the Application:
+
+bash
+Copy code
+node app.js
+Or with nodemon (if installed):
+
+bash
+Copy code
+npx nodemon app.js
+Test the Endpoints using tools like Postman or cURL.
+
+Register User:
+
+bash
+Copy code
+POST /api/auth/register
+Content-Type: application/json
+Body: { "username": "testuser", "password": "testpassword" }
+Login User:
+
+bash
+Copy code
+POST /api/auth/login
+Content-Type: application/json
+Body: { "username": "testuser", "password": "testpassword" }
+Access Protected Route:
+
+vbnet
+Copy code
+GET /api/auth/protected
+Header: { "Authorization": "Bearer <JWT_TOKEN>" }
+Commands to Run
+Initialize the project:
+
+bash
+Copy code
+npm init -y
+Install dependencies:
+
+bash
+Copy code
+npm install express jsonwebtoken bcryptjs
+Start the server:
+
+bash
+Copy code
+npx nodemon app.js
+Testing Example Output
+Registration:
+json
+Copy code
+{
+  "message": "User registered successfully"
+}
+Login:
+json
+Copy code
+{
+  "message": "Login successful",
+  "token": "eyJhbGciOiJIUzI1NiIsInR..."
+}
+Protected Route:
+json
+Copy code
+{
+  "message": "Welcome, testuser"
+}
+Let me know if you need further assistance or enhancements like database integration or Passport.js setup! 😊

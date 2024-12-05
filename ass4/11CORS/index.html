@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test CORS</title>
+    <script>
+      async function testCORS() {
+        try {
+          const response = await fetch('http://localhost:3000/', {
+            method: 'GET',
+          });
+          const data = await response.text();
+          console.log('Response from server:', data);
+        } catch (error) {
+          console.error('CORS Error:', error);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>CORS Test</h1>
+    <button onclick="testCORS()">Send Request</button>
+  </body>
+</html>
