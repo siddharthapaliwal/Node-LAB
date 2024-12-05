@@ -1,3 +1,0 @@
-The file "check.txt" exists.
-
-The file "check.txt" does not exist.
