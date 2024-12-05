@@ -1,7 +1,16 @@
-// app.js
-// Import the functions from mathUtils.js
-const { add, subtract } = require('./mathUtils');
+// npm init -y
+// npm i express---
+// npm i body-parser
 
-// Use the imported functions
-console.log("Addition:", add(10, 5));        // Output: 15
-console.log("Subtraction:", subtract(10, 5)); // Output: 5
+// NO-porblem-send
+// create file server server.js
+// Import the startServer function from server.js
+// Import the startServer function from server.js
+const startServer = require('../server');
+
+// Specify the port
+const PORT = 3000;
+
+// Start the server
+startServer(PORT);
+
