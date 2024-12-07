@@ -1,1 +1,0 @@
-This is a sample file to demonstrate reading with promises.
